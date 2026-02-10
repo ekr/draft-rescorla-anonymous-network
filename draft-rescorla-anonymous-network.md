@@ -1,14 +1,16 @@
 ---
 title: "Anonymous Access to the IETF Network"
 abbrev: "Anonymous Access"
-category: info
+category: bcp
 
+updates: rfc8718
 docname: draft-rescorla-anonymous-network-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
 consensus: true
 v: 3
+status: bcp
 # area: AREA
 # workgroup: WG Working Group
 keyword:
@@ -75,11 +77,8 @@ This document extends the mandatory criteria as follows:
 >     required, it MUST be possible for users to anonymously
 >     obtain an arbitrary number of credentials which are not
 >     linkable to their identity. The network SHOULD provide
->     anonymous access or access via a shared credential if
+>     unauthenticated access or access via a shared credential if
 >     practicable.
-
-[TODO: I would prefer to favor no authentication, but I think that
-will just make it harder].
 
 This text is intended to maximize user privacy and forbid any
 authentication mechanisms which would make it possible to
