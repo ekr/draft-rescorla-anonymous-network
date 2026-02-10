@@ -60,11 +60,16 @@ criterion:
 >     MUST be possible to provision redundant paths to the Internet.
 
 This criterion does not require that access be anonymous; if IETF
-users need to authenticate to use the network, thus potentially opens
+users need to authenticate to use the network, this potentially opens
 up IETF participant's activity to surveillance.  The IETF has
 determined {{?RFC7258}} that pervasive monitoring is an attack on the
 Internet. This document requires that the IETF network provide
 anonymous access, thus helping to mitigate this form of attack.
+
+
+## Conventions and Definitions
+
+{::boilerplate bcp14-tagged}
 
 
 # Requirements
@@ -83,11 +88,6 @@ This document extends the mandatory criteria as follows:
 This text is intended to maximize user privacy and forbid any
 authentication mechanisms which would make it possible to
 attribute traffic to a specific identifiable user.
-
-
-# Conventions and Definitions
-
-{::boilerplate bcp14-tagged}
 
 
 # Security Considerations
