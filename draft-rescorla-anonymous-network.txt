@@ -4,7 +4,8 @@
 
 Network Working Group                                        E. Rescorla
 Internet-Draft                                               Independent
-Intended status: Informational                          10 February 2026
+Updates: rfc8718 (if approved)                          10 February 2026
+Intended status: Best Current Practice                                  
 Expires: 14 August 2026
 
 
@@ -106,11 +107,8 @@ Table of Contents
       required, it MUST be possible for users to anonymously
       obtain an arbitrary number of credentials which are not
       linkable to their identity. The network SHOULD provide
-      anonymous access or access via a shared credential if
+      unauthenticated access or access via a shared credential if
       practicable.
-
-   [TODO: I would prefer to favor no authentication, but I think that
-   will just make it harder].
 
    This text is intended to maximize user privacy and forbid any
    authentication mechanisms which would make it possible to attribute
