@@ -19,8 +19,8 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
+title: "Anonymous Access to the IETF Network"
+abbrev: "Anonymous Access"
 category: info
 
 docname: draft-todo-yourname-protocol-latest
