@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>Anonymous Access to the IETF Network</title>
+<title>Security Requirements for the IETF Network</title>
 <meta content="Eric Rescorla" name="author">
 <meta content="
        This document requires the network at the IETF plenary meeting
-to provide anonymous access. 
+to protect the security and privacy of its users. 
     " name="description">
 <meta content="xml2rfc 3.31.0" name="generator">
 <meta content="draft-rescorla-anonymous-network-latest" name="ietf.draft">
@@ -165,7 +165,7 @@ to provide anonymous access.
   font-weight: 400;
   font-display: swap;
   src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 @font-face {
   font-family: 'Oxygen Mono';
@@ -173,7 +173,8 @@ to provide anonymous access.
   font-weight: 400;
   font-display: swap;
   src: local('Oxygen Mono'), local('OxygenMono-Regular'), url('https://martinthomson.github.io/rfc-css/fonts/oxygenmono-regular-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 }
 
 @font-face {
@@ -1043,12 +1044,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">Anonymous Access</td>
+<td class="center">IETF Network Security</td>
 <td class="right">February 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Rescorla</td>
-<td class="center">Expires 14 August 2026</td>
+<td class="center">Expires 30 August 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1064,12 +1065,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfcrfc8718" class="eref">rfc8718</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-02-10" class="published">10 February 2026</time>
+<time datetime="2026-02-26" class="published">26 February 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-08-14">14 August 2026</time></dd>
+<dd class="expires"><time datetime="2026-08-30">30 August 2026</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1079,11 +1080,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">Anonymous Access to the IETF Network</h1>
+<h1 id="title">Security Requirements for the IETF Network</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document requires the network at the IETF plenary meeting
-to provide anonymous access.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+to protect the security and privacy of its users.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1115,7 +1116,7 @@ to provide anonymous access.<a href="#section-abstract-1" class="pilcrow">¶</a>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 14 August 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 30 August 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1208,12 +1209,36 @@ MUST be possible to provision redundant paths to the Internet.
 </div>
 </li>
       </ul>
-<p id="section-1-3">This criterion does not require that access be anonymous; if IETF
-users need to authenticate to use the network, this potentially opens
-up IETF participant's activity to surveillance.  The IETF has
-determined <span>[<a href="#RFC7258" class="cite xref">RFC7258</a>]</span> that pervasive monitoring is an attack on the
-Internet. This document requires that the IETF network provide
-anonymous access, thus helping to mitigate this form of attack.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-3">A critical, but implicit requirement in this paragraph is that IETF participants
+need to be secure in their use of the Internet.  It will clearly have a material
+impact on participants' Internet use if they cannot use the security
+technologies they require, or if accessing the IETF network requires them to
+reduce their security or privacy posture (e.g., by revealing sensitive information).<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">As expressed in <span>[<a href="#RFC7258" class="cite xref">RFC7258</a>]</span>, the IETF considers pervasive monitoring an attack,
+The IETF has a long history of developing protocols to protect the
+confidentiality and authenticity of Internet communications, such as IPsec,
+DNSSEC, TLS, and SSH.  More recently, there has been a focus on protecting the
+identities of the endpoints to communication, e.g., MASQUE, OHAI, and ECH.  The
+security properties of the IETF network should be aligned with these principles.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">For example:<a href="#section-1-5" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1-6.1">
+          <p id="section-1-6.1.1">IETF attendees often employ mechanisms such as IPsec, HTTPS, Oblivious HTTP, and TLS ECH
+to protect the security and privacy of their business and day-to-day Internet
+usage. If these security features cannot be used, attendees will not be able
+to use the Internet as they need to.<a href="#section-1-6.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-1-6.2">
+          <p id="section-1-6.2.1">IETF attendees typically expect that the IETF network will not collect more
+information about their usage of it than is technically necessary to operate
+the network.  If IETF users need to authenticate in a way that their Internet
+traffic can be attributed to them by local or upstream network operators, this
+expectation would be violated, and attendees might not be willing or able to use the
+Internet under such circumstances.<a href="#section-1-6.2.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="section-1-7">This document updates the requirements of <span>[<a href="#RFC8718" class="cite xref">RFC8718</a>]</span> to make these security
+requirements explicit.<a href="#section-1-7" class="pilcrow">¶</a></p>
 <div id="conventions-and-definitions">
 <section id="section-1.1">
         <h3 id="name-conventions-and-definitions">
@@ -1235,23 +1260,34 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <p id="section-2-1">This document extends the mandatory criteria as follows:<a href="#section-2-1" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-2-2.1">
-          <div class="alignLeft art-text artwork" id="section-2-2.1.1">
-<pre>
-The IETF network MUST be accessible by any IETF participant
-without providing authentication information that is tied
-to their identity. If user-specific authentication is
-required, it MUST be possible for users to anonymously
-obtain an arbitrary number of credentials which are not
-linkable to their identity. The network SHOULD provide
-unauthenticated access or access via a shared credential if
-practicable.
-</pre><a href="#section-2-2.1.1" class="pilcrow">¶</a>
-</div>
+          <p id="section-2-2.1.1">The IETF network <span class="bcp14">MUST</span> be compatible with widely-used Internet security
+technologies, and <span class="bcp14">MUST NOT</span> interfere with their usage.  These properties <span class="bcp14">MUST</span>
+also hold for upstream networks.  In other words, in addition to global
+reachability at the IP layer, the network must provide secure global
+reachability, in the sense of being able to securely connect to any other
+endpoint on the Internet using any widely-used security protocol.<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-2-3">This text is intended to maximize user privacy and forbid any
+<p id="section-2-3">This text is intended to ensure that IETF participants can continue to get the
+level of security that they require when they use the IETF network.<a href="#section-2-3" class="pilcrow">¶</a></p>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="section-2-4.1">
+          <p id="section-2-4.1.1">The IETF network <span class="bcp14">MUST NOT</span> collect information about IETF participants'
+Internet usage beyond what is technically required to operate the network. If
+user-linked information needs to be collected, then it <span class="bcp14">MUST NOT</span> be
+disseminated beyond the immediate IETF network operational team, and <span class="bcp14">MUST</span> be
+deleted at the end of an IETF meeting.<a href="#section-2-4.1.1" class="pilcrow">¶</a></p>
+<p id="section-2-4.1.2">The IETF network <span class="bcp14">MUST</span> be accessible by any IETF participant without providing
+authentication information that is tied to their identity. If user-specific
+authentication is required, it <span class="bcp14">MUST</span> be possible for users to anonymously
+obtain an arbitrary number of credentials which are not linkable to their
+identity. The network <span class="bcp14">SHOULD</span> provide unauthenticated access or access via a
+shared credential if practicable.<a href="#section-2-4.1.2" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="section-2-5">This text is intended to maximize user privacy and forbid any
 authentication mechanisms which would make it possible to
-attribute traffic to a specific identifiable user.<a href="#section-2-3" class="pilcrow">¶</a></p>
+attribute traffic to a specific identifiable user.<a href="#section-2-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
