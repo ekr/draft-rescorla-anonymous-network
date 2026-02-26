@@ -37,7 +37,7 @@ informative:
 --- abstract
 
 This document requires the network at the IETF plenary meeting
-to protect the security of its users.
+to protect the security and privacy of its users.
 
 
 --- middle
@@ -63,7 +63,7 @@ A critical, but implicit requirement in this paragraph is that IETF participants
 need to be secure in their use of the Internet.  It will clearly have a material
 impact on participants' Internet use if they cannot use the security
 technologies they require, or if accessing the IETF network requires them to
-reduce their security posture (e.g., by revealing sensitive information).
+reduce their security or privacy posture (e.g., by revealing sensitive information).
 
 As expressed in {{?RFC7258}}, the IETF considers pervasive monitoring an attack,
 The IETF has a long history of developing protocols to protect the
@@ -74,7 +74,7 @@ security properties of the IETF network should be aligned with these principles.
 
 For example:
 
-* IETF attendees often employ mechanisms such as IPsec, HTTPS, OHAI, and TLS ECH
+* IETF attendees often employ mechanisms such as IPsec, HTTPS, Oblivious HTTP, and TLS ECH
   to protect the security and privacy of their business and day-to-day Internet
   usage. If these security features cannot be used, attendees will not be able
   to use the Internet as they need to.
@@ -83,8 +83,8 @@ For example:
   information about their usage of it than is technically necessary to operate
   the network.  If IETF users need to authenticate in a way that their Internet
   traffic can be attributed to them by local or upstream network operators, this
-  expectation would be violated, and attendees might not be willing to use the
-  Internet under such circumstances.  
+  expectation would be violated, and attendees might not be willing or able to use the
+  Internet under such circumstances.
 
 This document updates the requirements of {{!RFC8718}} to make these security
 requirements explicit.
@@ -103,7 +103,7 @@ This document extends the mandatory criteria as follows:
 > also hold for upstream networks.  In other words, in addition to global
 > reachability at the IP layer, the network must provide secure global
 > reachability, in the sense of being able to securely connect to any other
-> endpoint on the Internet using any widely-used security protocol. 
+> endpoint on the Internet using any widely-used security protocol.
 
 This text is intended to ensure that IETF participants can continue to get the
 level of security that they require when they use the IETF network.
