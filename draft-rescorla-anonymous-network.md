@@ -27,6 +27,9 @@ author:
     fullname: "Eric Rescorla"
     organization: Independent
     email: "ekr@rtfm.com"
+ -
+    fullname: "Tommy Pauly"
+    email: "tpauly.ietf@gmail.com"
 
 normative:
 
