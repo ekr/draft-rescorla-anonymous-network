@@ -25,8 +25,13 @@ venue:
 author:
  -
     fullname: "Eric Rescorla"
-    organization: Independent
     email: "ekr@rtfm.com"
+ -
+    fullname: "Richard Barnes"
+    email: "rlb@ipv.sx"
+ -
+    fullname: "David Schinazi"
+    email: "dschinazi.ietf@gmail.com"
  -
     fullname: "Tommy Pauly"
     email: "tpauly.ietf@gmail.com"
