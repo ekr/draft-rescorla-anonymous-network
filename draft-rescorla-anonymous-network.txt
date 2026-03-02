@@ -3,10 +3,13 @@
 
 
 Network Working Group                                        E. Rescorla
-Internet-Draft                                               Independent
-Updates: rfc8718 (if approved)                                  T. Pauly
-Intended status: Best Current Practice                  27 February 2026
-Expires: 31 August 2026
+Internet-Draft                                                          
+Updates: rfc8718 (if approved)                                 R. Barnes
+Intended status: Best Current Practice                                  
+Expires: 3 September 2026                                    D. Schinazi
+                                                                        
+                                                                T. Pauly
+                                                            2 March 2026
 
 
                Security Requirements for the IETF Network
@@ -45,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 August 2026.
+   This Internet-Draft will expire on 3 September 2026.
 
 Copyright Notice
 
@@ -211,8 +214,15 @@ Acknowledgments
 Authors' Addresses
 
    Eric Rescorla
-   Independent
    Email: ekr@rtfm.com
+
+
+   Richard Barnes
+   Email: rlb@ipv.sx
+
+
+   David Schinazi
+   Email: dschinazi.ietf@gmail.com
 
 
    Tommy Pauly
