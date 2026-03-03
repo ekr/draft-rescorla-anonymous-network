@@ -106,12 +106,11 @@ requirements explicit.
 
 This document extends the mandatory criteria as follows:
 
-> The IETF network MUST be compatible with widely-used Internet security
-> technologies, and MUST NOT interfere with their usage.  These properties MUST
-> also hold for upstream networks.  In other words, in addition to global
-> reachability at the IP layer, the network must provide secure global
-> reachability, in the sense of being able to securely connect to any other
-> endpoint on the Internet using any widely-used security protocol.
+> Venue networks and their service providers MUST NOT interfere with commonly
+> used end host security capabilities, including but not limited to
+> any form of transport, IP, or application layer security, any associated
+> cryptographic suites, or any privacy mechanisms such as MAC address
+> randomization.
 
 This text is intended to ensure that IETF participants can continue to get the
 level of security that they require when they use the IETF network.
