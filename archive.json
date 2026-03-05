@@ -1,0 +1,385 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2026-03-05T00:24:54.600597+00:00",
+  "repo": "ekr/draft-rescorla-anonymous-network",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 5,
+      "id": "I_kwDORNJq7s7vh-rA",
+      "title": "Allow blocking some specific ports",
+      "url": "https://github.com/ekr/draft-rescorla-anonymous-network/issues/5",
+      "state": "OPEN",
+      "author": "ekr",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "There are probably some ports (25, 17, 19, 137) that would be OK to block and don't really have much in the way of normal use from the IETF network. ",
+      "createdAt": "2026-03-03T20:54:37Z",
+      "updatedAt": "2026-03-03T20:54:37Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDORNJq7s7v1Kg3",
+      "title": "Intro Suggestion",
+      "url": "https://github.com/ekr/draft-rescorla-anonymous-network/issues/7",
+      "state": "OPEN",
+      "author": "jlivingood",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "re \"A critical, but implicit requirement in this paragraph is that IETF participants need to be secure in their use of the Internet. \"\n\nI do not actually think everyone viewed this as implicit and one could even argue that network requirements should always be explicit. \n\nre \"It will clearly have a material impact on participants' Internet use if they cannot use the security technologies they require, or if accessing the IETF network requires them to reduce their security or privacy posture (e.g., by revealing sensitive information)\"\n\nI think in the 125 case, people seemingly can still use the security tech they wish, it is more about privacy or tracking, no? \n\nPerhaps it is better to be more explicit such as something along these lines:\n\nIn order to protect the integrity of the standards process and assure the security of communications at meetings, as well as the privacy and security or participants, this document adds new explicit security and privacy requirements for the ETF meeting network. Protocols that use strong encryption to protect the confidentiality and authenticity of Internet communications, such as TLS, must be permitted on the IETF meeting network without alteration (e.g., forced TLS proxies) so that end to end encryption is fully functional and cannot be downgraded. ",
+      "createdAt": "2026-03-04T19:20:48Z",
+      "updatedAt": "2026-03-04T19:25:55Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "jlivingood",
+          "authorAssociation": "NONE",
+          "body": "And for the bullet list, rather than suggesting what IETF attendees may or may not think is implicit, consider laying out explicit technical requirements. \n\nsuch as ....\n\nFor example:\n\n- IETF attendees often employ mechanisms such as IPsec, HTTPS, Oblivious HTTP, and TLS ECH to protect the security and privacy of their business and day-to-day Internet usage. The end to end security of these protocols must not be altered or downgraded. \n\n- The IETF network will not collect more information about their usage of it than is technically necessary to operate the network or which is required to comply with local laws. In the latter case, if IETF users must authenticate in a way that their Internet traffic can be attributed to them by local or upstream network operators, this must be disclosed to attendees with as much advance notice as is reasonably possible. ",
+          "createdAt": "2026-03-04T19:24:53Z",
+          "updatedAt": "2026-03-04T19:25:55Z"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "I_kwDORNJq7s7v1Xuu",
+      "title": "Possible Legal Intercept/Traceability References",
+      "url": "https://github.com/ekr/draft-rescorla-anonymous-network/issues/8",
+      "state": "OPEN",
+      "author": "jlivingood",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "I am sure this is not exhaustive - trying to document the interplay between this doc and \"traceability\" laws in several jurisdictions. \n\nFrom Gemini: Below are the countries and legal frameworks that require the association of users to source IP addresses, either for routine \"blanket\" data retention or for specific abuse traceback.\n\n### 1. United States \n\nWhile the U.S. does not have a federal \"blanket\" data retention law requiring ISPs to log all users' IP associations for a set period, two laws create the \"capability\" and \"access\" requirements:\n\n* **CALEA (Communications Assistance for Law Enforcement Act):** Requires telecommunications carriers to ensure their networks have the **capability** to isolate and provide \"call-identifying information\" (including source/destination IP addresses) to the government upon receipt of a warrant.\n* **Stored Communications Act (SCA):** While it doesn't mandate *proactive* logging, if an ISP *does* keep logs (which most do for business reasons), the SCA provides the legal mechanism for law enforcement to compel the disclosure of the subscriber identity associated with a specific IP address at a specific time.\n\n### 2. European Union (Recent Shift in 2024)\n\nFor years, the European Court of Justice (CJEU) struck down \"general and indiscriminate\" data retention. However, a landmark ruling on **April 30, 2024 (the HADOPI case)** shifted the landscape:\n\n* **The Ruling:** The CJEU ruled that EU member states **can** require the \"indiscriminate retention\" of source IP addresses for the purpose of combating crimes (including minor ones like copyright infringement), provided there is a \"watertight separation\" between the IP data and the identity data.\n* **France:** Operates under the **SREN Law** and **HADOPI** framework, which requires ISPs to link IP addresses to civil identities for \"graduated response\" (traceback) against piracy and other offenses.\n* **Germany:** Recently proposed laws (2024/2025) aim to require ISPs to store IP addresses for **3 months** specifically for criminal traceback.\n\n### 3. United Kingdom\n\n* **Investigatory Powers Act (2016/2024):** Commonly known as the \"Snooper's Charter,\" it requires ISPs to retain **Internet Connection Records (ICRs)** for **12 months**. An ICR links a specific user (subscriber) to the services or domains they visited, essentially mandating the exact \"user-to-source-IP\" association that the IETF draft seeks to forbid.\n\n### 4. Brazil\n\n* **Marco Civil da Internet (2014):** Brazil\u2019s \"Internet Bill of Rights\" actually **mandates** data retention. Article 13 requires \"connection providers\" (ISPs) to store connection logs\u2014including the date, time, duration, and the **IP address used by the terminal**\u2014for **one year** in a controlled, secure environment for potential judicial use.\n\n### 5. Australia\n\n* **Telecommunications (Interception and Access) Amendment (Data Retention) Act 2015:** This law requires all Australian ISPs to retain a specific set of metadata for **two years**. This metadata includes the **source IP address** and the **subscriber\u2019s identity** (name, address, billing info), specifically to enable traceback in criminal investigations.\n\n### 6. China & South Korea (Real-Name Systems)\n\n* **China:** The **Cybersecurity Law (2016)** and recent **2025 Network Data Security Management Regulations** mandate \"Real-Name Registration.\" It is illegal to provide internet access without verifying the user's identity. All traffic is systematically tied to a \"Network Certificate\" or ID.\n* **South Korea:** While their \"Internet Real-Name Law\" was partially struck down, the **Identity Verification System (IDV)** still requires users to verify their identity (via phone or I-PIN) to post on major platforms, and ISPs maintain logs that link dynamic IPs to specific subscribers for police requests.\n\n### 7. Turkey\n\n* **Law No. 5651:** Known as the \"Internet Law,\" it requires \"Access Providers\" to keep traffic information (including the association between the user and the IP address) for at least **6 months to 2 years**. Failure to provide this info during a criminal investigation can result in heavy fines or license revocation.\n\n### Summary of the Conflict\n\nThe IETF draft states:\n\n> *\"The IETF network MUST NOT collect information about IETF participants' Internet usage beyond what is technically required... and MUST NOT be disseminated beyond the immediate IETF network operational team.\"*\n\n**The legal conflict arises because:**\n\n1. **Traceability:** Many laws (UK, Australia, Brazil, Turkey) view the *ability* to identify a user via their IP as a **legal mandate**, not an \"optional\" technical requirement.\n2. **Authentication:** The draft forbids identity-linked authentication. However, in countries like China or South Africa (**RICA Act**), providing unauthenticated internet access is a regulatory violation for the provider.\n3. **Abuse Management:** The draft acknowledges that its proposal makes abuse management harder. In many of the jurisdictions above, a network provider that cannot identify a malicious user on their network upon a court order may be held **legally or civilly liable** for the \"facilitation\" of the crime.",
+      "createdAt": "2026-03-04T19:32:55Z",
+      "updatedAt": "2026-03-04T19:32:55Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDORNJq7s7C1MgW",
+      "title": "Tweaks",
+      "url": "https://github.com/ekr/draft-rescorla-anonymous-network/pull/1",
+      "state": "MERGED",
+      "author": "DavidSchinazi",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-02-10T19:32:37Z",
+      "updatedAt": "2026-02-10T19:34:27Z",
+      "baseRepository": "ekr/draft-rescorla-anonymous-network",
+      "baseRefName": "main",
+      "baseRefOid": "00d23b18f8e772c171ccdc39c34f4cbadd039563",
+      "headRepository": "ekr/draft-rescorla-anonymous-network",
+      "headRefName": "DavidSchinazi-patch-1",
+      "headRefOid": "243ed3703ed3f5def0bb548d14ae08ddb672e515",
+      "closedAt": "2026-02-10T19:34:27Z",
+      "mergedAt": "2026-02-10T19:34:27Z",
+      "mergedBy": "ekr",
+      "mergeCommit": {
+        "oid": "85ffc9ab3164c2bf4e8540ec32a17db9defe59e6"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDORNJq7s7C2vpQ",
+      "title": "Reframe as Security Requirements",
+      "url": "https://github.com/ekr/draft-rescorla-anonymous-network/pull/2",
+      "state": "MERGED",
+      "author": "bifurcation",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-02-10T21:31:40Z",
+      "updatedAt": "2026-02-26T17:45:53Z",
+      "baseRepository": "ekr/draft-rescorla-anonymous-network",
+      "baseRefName": "main",
+      "baseRefOid": "85ffc9ab3164c2bf4e8540ec32a17db9defe59e6",
+      "headRepository": "ekr/draft-rescorla-anonymous-network",
+      "headRefName": "rlb-edit",
+      "headRefOid": "f5d080e2ffcd3bf8444d90736de6acd956529853",
+      "closedAt": "2026-02-26T17:45:52Z",
+      "mergedAt": "2026-02-26T17:45:52Z",
+      "mergedBy": "ekr",
+      "mergeCommit": {
+        "oid": "acf3339df90ddeb8cab8be1fa9cb5297180b293d"
+      },
+      "comments": [
+        {
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Agreed with David that I like this overall, but I think the privacy/anonymity focus needs to remain a bit more obvious.",
+          "createdAt": "2026-02-26T15:40:09Z",
+          "updatedAt": "2026-02-26T15:40:09Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDORNJq7s7haI5O",
+          "commit": {
+            "abbreviatedOid": "8c0a5ce"
+          },
+          "author": "github-actions",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-02-10T21:32:08Z",
+          "updatedAt": "2026-02-10T21:32:08Z",
+          "comments": [
+            {
+              "originalPosition": 53,
+              "body": "````suggestion\n  Internet under such circumstances.\n````",
+              "createdAt": "2026-02-10T21:32:08Z",
+              "updatedAt": "2026-02-10T21:32:08Z"
+            },
+            {
+              "originalPosition": 77,
+              "body": "````suggestion\n> endpoint on the Internet using any widely-used security protocol.\n````",
+              "createdAt": "2026-02-10T21:32:08Z",
+              "updatedAt": "2026-02-10T21:32:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORNJq7s7hcEJW",
+          "commit": {
+            "abbreviatedOid": "8c0a5ce"
+          },
+          "author": "DavidSchinazi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Overall I like this. Minor comments inline",
+          "createdAt": "2026-02-11T00:03:25Z",
+          "updatedAt": "2026-02-11T00:06:30Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\nto protect the security and privacy of its users.\n```",
+              "createdAt": "2026-02-11T00:03:26Z",
+              "updatedAt": "2026-02-11T00:06:31Z"
+            },
+            {
+              "originalPosition": 52,
+              "body": "```suggestion\n  expectation would be violated, and attendees might not be willing or able to use the\n```",
+              "createdAt": "2026-02-11T00:04:48Z",
+              "updatedAt": "2026-02-11T00:06:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORNJq7s7mLnSz",
+          "commit": {
+            "abbreviatedOid": "8c0a5ce"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-02-26T15:37:58Z",
+          "updatedAt": "2026-02-26T15:37:59Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "Agreed this should still mention privacy / anonymity",
+              "createdAt": "2026-02-26T15:37:58Z",
+              "updatedAt": "2026-02-26T15:37:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORNJq7s7mLoGu",
+          "commit": {
+            "abbreviatedOid": "8c0a5ce"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-02-26T15:38:34Z",
+          "updatedAt": "2026-02-26T15:38:34Z",
+          "comments": [
+            {
+              "originalPosition": 32,
+              "body": "```suggestion\nreduce their security or privacy posture (e.g., by revealing sensitive information).\n```",
+              "createdAt": "2026-02-26T15:38:34Z",
+              "updatedAt": "2026-02-26T15:38:34Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORNJq7s7mLoqt",
+          "commit": {
+            "abbreviatedOid": "8c0a5ce"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-02-26T15:38:59Z",
+          "updatedAt": "2026-02-26T15:38:59Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "```suggestion\n* IETF attendees often employ mechanisms such as IPsec, HTTPS, Oblivious HTTP, and TLS ECH\n```",
+              "createdAt": "2026-02-26T15:38:59Z",
+              "updatedAt": "2026-02-26T15:38:59Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDORNJq7s7GsZ3p",
+      "title": "Add Tommy as a co-author",
+      "url": "https://github.com/ekr/draft-rescorla-anonymous-network/pull/3",
+      "state": "MERGED",
+      "author": "tfpauly",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-02-27T00:47:12Z",
+      "updatedAt": "2026-02-27T00:58:06Z",
+      "baseRepository": "ekr/draft-rescorla-anonymous-network",
+      "baseRefName": "main",
+      "baseRefOid": "acf3339df90ddeb8cab8be1fa9cb5297180b293d",
+      "headRepository": "ekr/draft-rescorla-anonymous-network",
+      "headRefName": "tfpauly-patch-1",
+      "headRefOid": "2f1786ff2988983160d3bb8d2acab0de7472c03a",
+      "closedAt": "2026-02-27T00:58:05Z",
+      "mergedAt": "2026-02-27T00:58:05Z",
+      "mergedBy": "ekr",
+      "mergeCommit": {
+        "oid": "f7eb8eb542aba3239f7b7007fdce7dac46c04f8a"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDORNJq7s7HaPx5",
+      "title": "Add new authors",
+      "url": "https://github.com/ekr/draft-rescorla-anonymous-network/pull/4",
+      "state": "MERGED",
+      "author": "ekr",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-03-02T18:56:13Z",
+      "updatedAt": "2026-03-02T20:09:29Z",
+      "baseRepository": "ekr/draft-rescorla-anonymous-network",
+      "baseRefName": "main",
+      "baseRefOid": "f7eb8eb542aba3239f7b7007fdce7dac46c04f8a",
+      "headRepository": "ekr/draft-rescorla-anonymous-network",
+      "headRefName": "authorship",
+      "headRefOid": "36fe674ca23f0ccc0558774b094e1db2a3f659f0",
+      "closedAt": "2026-03-02T20:09:29Z",
+      "mergedAt": "2026-03-02T20:09:29Z",
+      "mergedBy": "ekr",
+      "mergeCommit": {
+        "oid": "625976774c69e7301c595d0938e54b9e773d2a58"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDORNJq7s7nK0sU",
+          "commit": {
+            "abbreviatedOid": "36fe674"
+          },
+          "author": "DavidSchinazi",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-03-02T19:57:52Z",
+          "updatedAt": "2026-03-02T19:57:52Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDORNJq7s7Ht8kO",
+      "title": "try a little specificity for the IASA",
+      "url": "https://github.com/ekr/draft-rescorla-anonymous-network/pull/6",
+      "state": "OPEN",
+      "author": "elear",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Try this on for size and see if you like it.  Feel free to close if you don't.",
+      "createdAt": "2026-03-03T21:36:24Z",
+      "updatedAt": "2026-03-03T21:36:24Z",
+      "baseRepository": "ekr/draft-rescorla-anonymous-network",
+      "baseRefName": "main",
+      "baseRefOid": "625976774c69e7301c595d0938e54b9e773d2a58",
+      "headRepository": "elear/draft-rescorla-anonymous-network",
+      "headRefName": "focusOnIASA",
+      "headRefOid": "88e820b966016d230eb24b121ba23adb0f6b03db",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
